@@ -1,0 +1,4 @@
+- name: import guacamole 
+  synchronize:
+    src: some/images.tgz
+    dest: /opt/docker/jumpserver

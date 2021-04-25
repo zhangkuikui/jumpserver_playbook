@@ -1,0 +1,15 @@
+- name: add docker-ce.repo
+  template:
+    src: docker-ce.repo
+    dest: /etc/yum.repos.d/docker-ce.repo
+
+- name: install docker
+  yum:
+    name: docker
+    state: present
+
+#- name: install docker
+#  shell: yum install docker-ce-18.06.3.ce-3.el7 -y
+#- name: Playbook Sample Task
+#  debug:
+#    msg: Welcome to Ansible 

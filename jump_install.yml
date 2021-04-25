@@ -1,0 +1,13 @@
+---
+- name:  Install Docker Server
+  hosts: '{{ env_host_list }}'
+  remote_user: root
+  vars:
+
+  roles:
+    - { role: 'docker_install' }
+    - { role: 'rsync_install' }
+    - { role: 'import_images' }
+
+###END
+#
